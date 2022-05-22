@@ -1,8 +1,7 @@
-package com.example.rekapresensionline.views.fotgotpass
+package com.example.rekapresensionline.views.forgotpass
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.rekapresensionline.R
 import com.example.rekapresensionline.databinding.ActivityForgotPasswordBinding
 
 class ForgotPasswordActivity : AppCompatActivity() {
