@@ -13,17 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RekaPresensiOnline"
         tools:targetApi="31">
-        <activity
-            android:name=".ForgotPasswordActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".views.main.MainActivity"
+        <activity android:name=".views.forgotpass.ForgotPasswordActivity"/>
+        <activity android:name=".views.login.LoginActivity"/>
+        <activity android:name=".views.splash.SplashActivity"/>
+        <activity android:name=".views.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDqcGtQC-8Qq-OcMVWDxByxRaeXDkxPqo4" />
     </application>
 
 </manifest>
