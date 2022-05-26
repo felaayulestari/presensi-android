@@ -47,32 +47,32 @@ dependencies {
 
     //Material
     implementation 'com.google.android.material:material:1.7.0-alpha01'
-//
-//    //Anko
-//    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
-//
-//    // material calendar view
-//    implementation 'com.applandeo:material-calendar-view:1.8.0-rc01'
-//
-//    //Circle ImageView
-//    implementation 'de.hdodenhof:circleimageview:3.1.0'
-//
-//    //Hawk
-//    implementation "com.orhanobut:hawk:2.0.1"
-//
-//    // OkHttp
-//    implementation "com.squareup.okhttp3:okhttp:4.9.0"
-//    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
-//
-//    // retrofit
-//    implementation "com.squareup.retrofit2:retrofit:2.9.0"
-//    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
-//    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
-//    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
-//
-//    //Glide
-//    implementation 'com.github.bumptech.glide:glide:4.11.0'
-//
+
+    //Anko
+    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
+
+    // material calendar view
+    implementation 'com.applandeo:material-calendar-view:1.8.0-rc01'
+
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Hawk
+    implementation "com.orhanobut:hawk:2.0.1"
+
+    // OkHttp
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
     //Google Maps
     implementation 'com.google.android.gms:play-services-location:19.0.1'
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
