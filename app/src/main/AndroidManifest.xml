@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RekaPresensiOnline"
         tools:targetApi="31">
+        <activity
+            android:name=".UbahPasswordActivity"
+            android:exported="false" />
         <activity android:name=".views.forgotpass.ForgotPasswordActivity" />
         <activity android:name=".views.login.LoginActivity" />
         <activity android:name=".views.splash.SplashActivity" />
@@ -25,6 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_api_key" />
