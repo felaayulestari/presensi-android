@@ -13,14 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RekaPresensiOnline"
         tools:targetApi="31">
-        <activity
-            android:name=".UbahPasswordActivity"
-            android:exported="false" />
+        <activity android:name=".views.ubahpass.UbahPasswordActivity" />
         <activity android:name=".views.forgotpass.ForgotPasswordActivity" />
         <activity android:name=".views.login.LoginActivity" />
-        <activity android:name=".views.splash.SplashActivity" />
-        <activity
-            android:name=".views.main.MainActivity"
+
+        <activity android:name=".views.splash.SplashActivity"
+            android:screenOrientation="fullSensor"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".views.main.MainActivity"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

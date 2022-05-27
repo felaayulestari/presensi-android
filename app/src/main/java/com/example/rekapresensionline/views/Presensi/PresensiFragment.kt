@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.rekapresensionline.R
+import com.example.rekapresensionline.databinding.FragmentPresensiBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -17,11 +18,20 @@ class PresensiFragment : Fragment(), OnMapReadyCallback {
 
     private var mapPresensi: SupportMapFragment? = null
     private var map: GoogleMap? = null
+    private var binding: FragmentPresensiBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_presensi, container, false)
+    ): View?{
+        binding = FragmentPresensiBinding.inflate(inflater, container, false)
+        return binding?.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
