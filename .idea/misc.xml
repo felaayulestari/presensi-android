@@ -3,7 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/drawable/bg_current_time_dialog.xml" value="0.1435" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/activity_forgot_password.xml" value="0.3961937716262976" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/activity_main.xml" value="0.136" />
         <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/activity_splash.xml" value="0.152" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/activity_ubah_password.xml" value="0.1" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/bottom_sheet_presensi.xml" value="0.1" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/fragment_histori.xml" value="0.1" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/fragment_presensi.xml" value="0.1" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/fragment_profil.xml" value="0.1" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/layout/layout_dialog_lokasi_saat_ini.xml" value="0.1" />
+        <entry key="..\:/Kuliah/TA/RekaPresensiOnline/app/src/main/res/menu/main_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
