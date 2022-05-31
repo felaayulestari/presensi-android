@@ -26,4 +26,5 @@
     <string name="please_field_your_password">Please field your password</string>
     <string name="gagal">Gagal</string>
     <string name="berhasil">Berhasil</string>
+    <string name="failed">failed</string>
 </resources>
