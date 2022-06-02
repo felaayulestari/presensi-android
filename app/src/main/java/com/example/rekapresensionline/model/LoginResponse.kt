@@ -14,6 +14,12 @@ data class LoginResponse(
 	val message: String? = null
 )
 
+data class Meta(
+
+	@field:SerializedName("token")
+	val token: String? = null
+)
+
 data class User(
 
 	@field:SerializedName("is_admin")
@@ -39,10 +45,4 @@ data class User(
 
 	@field:SerializedName("email")
 	val email: String? = null
-)
-
-data class Meta(
-
-	@field:SerializedName("token")
-	val token: String? = null
 )
