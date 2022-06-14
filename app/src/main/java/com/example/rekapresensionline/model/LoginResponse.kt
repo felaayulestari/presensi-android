@@ -32,7 +32,7 @@ data class User(
 	val name: String? = null,
 
 	@field:SerializedName("photo")
-	val photo: String? = null,
+	val photo: Any? = null,
 
 	@field:SerializedName("created_at")
 	val createdAt: String? = null,

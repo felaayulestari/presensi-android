@@ -45,6 +45,20 @@ class ForgotPasswordActivity : AppCompatActivity() {
         }
     }
 
+    private fun isFormValid(email: String): Boolean {
+        if (email.isEmpty()){
+            binding.etEmailForgotPassword.error = getString(R.string.please_field_your_email)
+            binding.etEmailForgotPassword.requestFocus()
+        }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            binding.etEmailForgotPassword.error = getString(R.string.please_use_valid_email)
+            binding.etEmailForgotPassword.requestFocus()
+        }else{
+            binding.etEmailForgotPassword.error = null
+            return true
+        }
+        return false
+    }
+
     private fun forgotPassToServer(email: String) {
         val forgotPasswordRequest = ForgotPasswordRequest(email = email)
         val forgotPasswordRequestString = Gson().toJson(forgotPasswordRequest)
@@ -101,20 +115,6 @@ class ForgotPasswordActivity : AppCompatActivity() {
                 }
 
             })
-    }
-
-    private fun isFormValid(email: String): Boolean {
-        if (email.isEmpty()){
-            binding.etEmailForgotPassword.error = getString(R.string.please_field_your_email)
-            binding.etEmailForgotPassword.requestFocus()
-        }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            binding.etEmailForgotPassword.error = getString(R.string.please_use_valid_email)
-            binding.etEmailForgotPassword.requestFocus()
-        }else{
-            binding.etEmailForgotPassword.error = null
-            return true
-        }
-        return false
     }
 
     private fun init() {

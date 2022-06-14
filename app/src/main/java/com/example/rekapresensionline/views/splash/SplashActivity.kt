@@ -21,8 +21,6 @@ class SplashActivity : AppCompatActivity() {
     private fun afterDelayGoToLogin() {
         Handler(Looper.getMainLooper()).postDelayed({
             checkIsLogin()
-            startActivity<LoginActivity>()
-            finishAffinity()
         },1200)
     }
 
