@@ -43,4 +43,6 @@
     <string name="masuk">Masuk</string>
     <string name="pulang">Pulang</string>
     <string name="anda_sudah_absen">Anda Sudah Absen</string>
+    <string name="absen_masuk">Absen Masuk</string>
+    <string name="absen_pulang">Absen Pulang</string>
 </resources>
