@@ -17,6 +17,7 @@ android {
 
         //BASE_URL
         buildConfigField "String", "BASE_URL", "\"https://presensireka.freehost.id/api/\""
+        buildConfigField "String", "BASE_IMAGE_URL", "\"https://presensireka.freehost.id/storage/profile/\""
     }
 
     buildTypes {

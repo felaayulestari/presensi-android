@@ -1,9 +1,6 @@
 package com.example.rekapresensionline.networking
 
-import com.example.rekapresensionline.model.ForgotPasswordResponse
-import com.example.rekapresensionline.model.HistoriResponse
-import com.example.rekapresensionline.model.LoginResponse
-import com.example.rekapresensionline.model.PresensiResponse
+import com.example.rekapresensionline.model.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -32,4 +29,9 @@ interface PresensiApiServices {
                              @Query("from") fromDate: String,
                              @Query("to") toDate: String
     ): Call<HistoriResponse>
+
+    @Headers("Accept: application/json", "Content-Type: application/json")
+    @POST("auth/logout")
+    fun logoutRequest(@Header("Authorization") token: String): Call<LogoutResponse>
+
 }
