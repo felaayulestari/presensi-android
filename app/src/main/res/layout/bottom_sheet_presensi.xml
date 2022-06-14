@@ -9,7 +9,7 @@
     android:paddingEnd="20dp"
     android:paddingTop="20dp"
     android:paddingBottom="28dp"
-    app:behavior_hideable="false"
+    app:behavior_hideable="true"
     app:behavior_peekHeight="44dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
@@ -81,7 +81,7 @@
         android:id="@+id/btn_check_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/check_in"
+        android:text="@string/masuk"
         android:textAllCaps="false"
         android:background="@drawable/bg_btn_primary"
         android:textColor="@android:color/white"
