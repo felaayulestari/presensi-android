@@ -78,20 +78,22 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
 
-                        <TextView
+                        <TextClock
                             android:id="@+id/tv_current_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="03"
+                            android:format24Hour="dd"
+                            android:format12Hour="dd"
                             android:textStyle="bold"
                             android:textSize="20sp"
                             android:textColor="@android:color/white"/>
 
-                        <TextView
+                        <TextClock
                             android:id="@+id/tv_current_month"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="September"
+                            android:format24Hour="MMM"
+                            android:format12Hour="MMM"
                             android:textStyle="bold"
                             android:textColor="@android:color/white"/>
 
@@ -129,7 +131,7 @@
                         android:id="@+id/tv_time_check_in"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="--:--"
+                        android:text="-"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
                         android:layout_marginTop="8dp"
@@ -142,7 +144,7 @@
                         android:id="@+id/tv_time_check_out"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="--:--"
+                        android:text="-"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
                         android:layout_marginTop="8dp"
