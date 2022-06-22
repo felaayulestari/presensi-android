@@ -433,7 +433,7 @@ class PresensiFragment : Fragment(), OnMapReadyCallback {
         map = googleMap
         if (checkPermission()){
             //Coordinate Kantor Rekaindo
-            val rekaindo = LatLng(-7.944986, 112.617386) //(-7.616216, 111.521565) //
+            val rekaindo = LatLng(-7.616216, 111.521565)
             map?.moveCamera(CameraUpdateFactory.newLatLng(rekaindo))
             map?.animateCamera(CameraUpdateFactory.zoomTo(20f))
 
