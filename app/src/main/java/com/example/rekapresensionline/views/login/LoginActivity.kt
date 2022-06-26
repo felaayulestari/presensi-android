@@ -1,16 +1,18 @@
 package com.example.rekapresensionline.views.login
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
+import androidx.appcompat.app.AppCompatActivity
 import com.example.rekapresensionline.R
 import com.example.rekapresensionline.databinding.ActivityLoginBinding
 import com.example.rekapresensionline.dialog.MyDialog
 import com.example.rekapresensionline.hawkstorage.HawkStorage
 import com.example.rekapresensionline.model.LoginResponse
 import com.example.rekapresensionline.networking.ApiServices
-import com.example.rekapresensionline.views.forgotpass.ForgotPasswordActivity
 import com.example.rekapresensionline.views.main.MainActivity
 import com.example.rekapresensionline.views.networking.RetrofitClient
 import com.google.gson.Gson
@@ -21,6 +23,7 @@ import retrofit2.Callback
 import retrofit2.Converter
 import retrofit2.Response
 import java.io.IOException
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -44,13 +47,33 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnForgotPassword.setOnClickListener {
-            startActivity<ForgotPasswordActivity>()
+        resetPass()
+        //startActivity<ForgotPasswordActivity>()
+        }
+    }
+
+    private fun resetPass() {
+        val headerReceiver = "Selamat pagi Admin, saya user dengan email : .... ," // Replace with your message.
+        val bodyMessageFormal = "ingin mereset password" // Replace with your message.
+        val whatsappContain = headerReceiver + bodyMessageFormal
+        val contact = "+6282333889670" // use nomor admin
+        val url = "https://api.whatsapp.com/send?phone=$contact"
+        try {
+            val intent = Intent(Intent.ACTION_VIEW)
+            //val pm: PackageManager = getPackageManager()
+            //pm.getPackageInfo("com.example.rekapresensionline", PackageManager.GET_ACTIVITIES)
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 
     private fun loginToServer(email: String, password: String) {
         val loginRequest = LoginRequest(email = email, password = password, deviceName = "mobile")
-        val loginRequestString = Gson().toJson(loginRequest)
+        val loginRequestString =
+            Gson().toJson(loginRequest)
         MyDialog.showProgressDialog(this)
 
         ApiServices.getPresensiServices()

@@ -222,6 +222,7 @@ class PresensiFragment : Fragment(), OnMapReadyCallback {
             params["type"] = requestType
 
             val requestPhotoFile = file.asRequestBody(mediaTypeFile)
+            println(requestPhotoFile)
             val multipartBody = MultipartBody.Part.createFormData("photo", file.name, requestPhotoFile)
             ApiServices.getPresensiServices()
                 .attend("Bearer $token", params, multipartBody)
