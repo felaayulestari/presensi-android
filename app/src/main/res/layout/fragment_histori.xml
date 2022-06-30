@@ -78,20 +78,22 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
 
-                        <TextView
+                        <TextClock
                             android:id="@+id/tv_current_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="03"
+                            android:format24Hour="dd"
+                            android:format12Hour="dd"
                             android:textStyle="bold"
                             android:textSize="20sp"
                             android:textColor="@android:color/white"/>
 
-                        <TextView
+                        <TextClock
                             android:id="@+id/tv_current_month"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="September"
+                            android:format24Hour="MMM"
+                            android:format12Hour="MMM"
                             android:textStyle="bold"
                             android:textColor="@android:color/white"/>
 
@@ -101,7 +103,7 @@
                         android:id="@+id/text_view_check_in"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_in"
+                        android:text="@string/masuk"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/darker_gray"
@@ -115,7 +117,7 @@
                         android:id="@+id/text_view_check_out"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_out"
+                        android:text="@string/pulang"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/darker_gray"
@@ -129,7 +131,7 @@
                         android:id="@+id/tv_time_check_in"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10:12"
+                        android:text="-"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
                         android:layout_marginTop="8dp"
@@ -142,7 +144,7 @@
                         android:id="@+id/tv_time_check_out"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10:12"
+                        android:text="-"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
                         android:layout_marginTop="8dp"
@@ -158,5 +160,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pbHistori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
