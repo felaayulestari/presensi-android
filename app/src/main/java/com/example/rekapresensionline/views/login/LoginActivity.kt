@@ -1,16 +1,17 @@
 package com.example.rekapresensionline.views.login
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
+import androidx.appcompat.app.AppCompatActivity
 import com.example.rekapresensionline.R
 import com.example.rekapresensionline.databinding.ActivityLoginBinding
 import com.example.rekapresensionline.dialog.MyDialog
 import com.example.rekapresensionline.hawkstorage.HawkStorage
 import com.example.rekapresensionline.model.LoginResponse
 import com.example.rekapresensionline.networking.ApiServices
-import com.example.rekapresensionline.views.forgotpass.ForgotPasswordActivity
 import com.example.rekapresensionline.views.main.MainActivity
 import com.example.rekapresensionline.views.networking.RetrofitClient
 import com.google.gson.Gson
@@ -21,6 +22,7 @@ import retrofit2.Callback
 import retrofit2.Converter
 import retrofit2.Response
 import java.io.IOException
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -44,8 +46,16 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnForgotPassword.setOnClickListener {
-            startActivity<ForgotPasswordActivity>()
+            forgotpass()
         }
+    }
+
+    private fun forgotpass() {
+        val number = "+62 82333889670"
+        val url = "https://api.whatsapp.com/send?phone=$number"
+        val i = Intent(Intent.ACTION_VIEW)
+        i.data = Uri.parse(url)
+        startActivity(i)
     }
 
     private fun loginToServer(email: String, password: String) {
