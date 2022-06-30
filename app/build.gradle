@@ -16,8 +16,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         //BASE_URL
-        buildConfigField "String", "BASE_URL", "\"https://presensireka.freehost.id/api/\""
-        buildConfigField "String", "BASE_IMAGE_URL", "\"https://presensireka.freehost.id/storage/profile/\""
+        buildConfigField "String", "BASE_URL", "\"https://attendancereka.freehost.id/api/\""
+        buildConfigField "String", "BASE_IMAGE_URL", "\"https://attendancereka.freehost.id/storage/profile/\""
     }
 
     buildTypes {

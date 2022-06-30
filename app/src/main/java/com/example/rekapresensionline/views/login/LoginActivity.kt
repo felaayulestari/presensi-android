@@ -47,27 +47,16 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnForgotPassword.setOnClickListener {
-        resetPass()
-        //startActivity<ForgotPasswordActivity>()
+        forgotpass()
         }
     }
 
-    private fun resetPass() {
-        val headerReceiver = "Selamat pagi Admin, saya user dengan email : .... ," // Replace with your message.
-        val bodyMessageFormal = "ingin mereset password" // Replace with your message.
-        val whatsappContain = headerReceiver + bodyMessageFormal
-        val contact = "+6282333889670" // use nomor admin
-        val url = "https://api.whatsapp.com/send?phone=$contact"
-        try {
-            val intent = Intent(Intent.ACTION_VIEW)
-            //val pm: PackageManager = getPackageManager()
-            //pm.getPackageInfo("com.example.rekapresensionline", PackageManager.GET_ACTIVITIES)
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+    private fun forgotpass() {
+        val number = "+62 82333889670"
+        val url = "https://api.whatsapp.com/send?phone=$number"
+        val i = Intent(Intent.ACTION_VIEW)
+        i.data = Uri.parse(url)
+        startActivity(i)
     }
 
     private fun loginToServer(email: String, password: String) {
